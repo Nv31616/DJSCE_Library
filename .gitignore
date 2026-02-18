@@ -1,0 +1,4 @@
+node_modules/
+data.json
+csv_to_db.py
+db.sqlite3
