@@ -1,0 +1,156 @@
+{% load static %}
+{% load tailwind_tags %}
+{% tailwind_css %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Library Floor Plan</title>
+</head>
+<body class="bg-slate-100 p-12">
+
+    <div class="flex flex-col items-center">
+        <div class="grid grid-cols-13 w-full max-w-7xl bg-white p-10 shadow-2xl border-b-16px border-slate-500" style="display: grid; grid-template-columns: repeat(13, minmax(0, 1fr));">
+
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">LH 13</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">LH 12</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 6 BACK</div>
+                <div class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 6 FRONT</div>
+            </div>
+            <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 6 FRONT</div>
+                <div class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 6 BACK</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">RH 13</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">RH 12</div>
+            </div>
+
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">LH 11</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">LH 10</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 5 BACK</div>
+                <div class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 5 FRONT</div>
+            </div>
+            <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 5 FRONT</div>
+                <div class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 5 BACK</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">RH 11</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">RH 10</div>
+            </div>
+
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">LH 9</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">LH 8</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 4 BACK</div>
+                <div class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 4 FRONT</div>
+            </div>
+            <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 4 FRONT</div>
+                <div class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 4 BACK</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">RH 9</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">RH 8</div>
+            </div>
+
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">LH 7</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">LH 6</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 3 BACK</div>
+                <div class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 3 FRONT</div>
+            </div>
+            <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 3 FRONT</div>
+                <div class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 3 BACK</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">RH 7</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">RH 6</div>
+            </div>
+
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">LH 5</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">LH 4</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 2 BACK</div>
+                <div class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180">BLOCK 2 FRONT</div>
+            </div>
+            <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+            <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                <div class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 2 FRONT</div>
+                <div class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr]">BLOCK 2 BACK</div>
+            </div>
+            <div class="col-span-1"></div>
+            <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col relative">
+                <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">RH 5</div>
+                <div class="flex-1 flex items-center justify-center text-[10px] font-bold">RH 4</div>
+                <div class="absolute -bottom-24 left-0 w-full h-20 border-2 border-slate-800 bg-slate-200 flex items-center justify-center text-[10px] font-black uppercase shadow-md z-10 translate-y-2">
+                    Computers
+                </div>
+            </div>
+
+            <div class="col-span-3 flex flex-col">
+                <div class="h-16 border-2 border-amber-900 rounded bg-amber-50 mb-4 flex flex-col">
+                    <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">LH 3</div>
+                    <div class="flex-1 flex items-center justify-center text-[10px] font-bold">LH 2</div>
+                </div>
+                <div class="h-20 border-2 border-slate-800 bg-slate-200 mb-4 flex items-center justify-center text-[10px] font-black uppercase shadow-md">
+                    Computers
+                </div>
+                <div class="h-8 border-2 border-amber-900 bg-amber-50 rounded-sm flex items-center justify-center text-[10px] font-bold">LH 1</div>
+            </div>
+
+            <div class="col-span-2"></div>
+
+            <div class="col-span-3 flex flex-col items-center justify-end pb-2 border-x-2 border-slate-300 bg-slate-50 h-full min-h-160px">
+                <span class="text-[9px] font-bold text-slate-400">ENTRANCE</span>
+            </div>
+
+            <div class="col-span-2 flex flex-col justify-end items-center h-full pb-0">
+                <div class="w-16 h-20 border-2 border-blue-900 bg-blue-50 flex items-center justify-center text-[8px] font-black uppercase text-center leading-tight shadow-md">
+                    Librarian's<br>Desk
+                </div>
+            </div>
+
+            <div class="col-span-3 flex flex-col">
+                <div class="h-16 border-2 border-amber-900 rounded bg-amber-50 mb-4 flex flex-col">
+                    <div class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold">RH 3</div>
+                    <div class="flex-1 flex items-center justify-center text-[10px] font-bold">RH 2</div>
+                </div>
+                <div class="h-20 mb-4"></div>
+                <div class="h-8 border-2 border-amber-900 bg-amber-50 rounded-sm flex items-center justify-center text-[10px] font-bold">RH 1</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

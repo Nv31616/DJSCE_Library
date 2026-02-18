@@ -1,0 +1,169 @@
+{% load static %}
+{% load tailwind_tags %}
+{% tailwind_css %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJSCE Library - Search & Map</title>
+</head>
+<body class="bg-slate-100 h-screen overflow-hidden flex flex-col">
+
+    <header class="bg-blue-900 text-white p-4 shadow-md z-20">
+        <h1 class="text-xl font-bold text-center">DJSCE Library Interactive Map</h1>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+        
+        <div class="w-80 bg-white shadow-xl border-r border-gray-200 p-6 flex flex-col z-10">
+            <h2 class="text-lg font-bold text-gray-700 mb-4">Find a Book</h2>
+            <input type="text" id="book-search" placeholder="Enter title or block..." 
+                class="w-full p-3 border-2 border-blue-500 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300">
+            
+            <div id="results-list" class="mt-6 flex-1 overflow-y-auto space-y-3">
+                <p class="text-sm text-gray-400 text-center mt-10">Start typing to search...</p>
+            </div>
+        </div>
+
+        <div class="flex-1 overflow-auto p-12 bg-slate-200">
+            <div class="flex flex-col items-center">
+                <div class="grid grid-cols-13 w-full max-w-6xl bg-white p-10 shadow-2xl border-b-[16px] border-slate-500" style="display: grid; grid-template-columns: repeat(13, minmax(0, 1fr));">
+
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-lh-13" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all duration-300">LH 13</div>
+                        <div id="wdn-lh-12" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all duration-300">LH 12</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-b-6" class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">B 6</div>
+                        <div id="stl-f-6" class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">F 6</div>
+                    </div>
+                    <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-f-6" class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">F 6</div>
+                        <div id="stl-b-6" class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">B 6</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-rh-13" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all duration-300">RH 13</div>
+                        <div id="wdn-rh-12" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all duration-300">RH 12</div>
+                    </div>
+
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-lh-11" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">LH 11</div>
+                        <div id="wdn-lh-10" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">LH 10</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-b-5" class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">B 5</div>
+                        <div id="stl-f-5" class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">F 5</div>
+                    </div>
+                    <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-f-5" class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">F 5</div>
+                        <div id="stl-b-5" class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">B 5</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-rh-11" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">RH 11</div>
+                        <div id="wdn-rh-10" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">RH 10</div>
+                    </div>
+
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-lh-9" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">LH 9</div>
+                        <div id="wdn-lh-8" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">LH 8</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-b-4" class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">B 4</div>
+                        <div id="stl-f-4" class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">F 4</div>
+                    </div>
+                    <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-f-4" class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">F 4</div>
+                        <div id="stl-b-4" class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">B 4</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-rh-9" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">RH 9</div>
+                        <div id="wdn-rh-8" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">RH 8</div>
+                    </div>
+
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-lh-7" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">LH 7</div>
+                        <div id="wdn-lh-6" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">LH 6</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-b-3" class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">B 3</div>
+                        <div id="stl-f-3" class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">F 3</div>
+                    </div>
+                    <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-f-3" class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">F 3</div>
+                        <div id="stl-b-3" class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">B 3</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-rh-7" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">RH 7</div>
+                        <div id="wdn-rh-6" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">RH 6</div>
+                    </div>
+
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden">
+                        <div id="wdn-lh-5" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">LH 5</div>
+                        <div id="wdn-lh-4" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">LH 4</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-b-2" class="w-1/2 border-r border-blue-200 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">B 2</div>
+                        <div id="stl-f-2" class="w-1/2 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] rotate-180 transition-all">F 2</div>
+                    </div>
+                    <div class="col-span-3 flex justify-center h-full"><div class="w-px bg-slate-200 h-full"></div></div>
+                    <div class="col-span-1 h-32 border-2 border-blue-900 rounded bg-blue-50 -mt-8 mb-24 flex overflow-hidden">
+                        <div id="stl-f-2" class="w-1/2 border-r border-blue-200 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">F 2</div>
+                        <div id="stl-b-2" class="w-1/2 bg-blue-100/40 flex items-center justify-center text-[8px] font-bold [writing-mode:vertical-lr] transition-all">B 2</div>
+                    </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-3 h-16 border-2 border-amber-900 rounded bg-amber-50 mb-24 flex flex-col overflow-hidden relative">
+                        <div id="wdn-rh-5" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">RH 5</div>
+                        <div id="wdn-rh-4" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">RH 4</div>
+                        <div class="absolute -bottom-24 left-0 w-full h-20 border-2 border-slate-800 bg-slate-200 flex items-center justify-center text-[10px] font-black uppercase shadow-md z-10 translate-y-2">Computers</div>
+                    </div>
+
+                    <div class="col-span-3 flex flex-col">
+                        <div class="h-16 border-2 border-amber-900 rounded bg-amber-50 mb-4 flex flex-col overflow-hidden">
+                            <div id="wdn-lh-3" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">LH 3</div>
+                            <div id="wdn-lh-2" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">LH 2</div>
+                        </div>
+                        <div class="h-20 border-2 border-slate-800 bg-slate-200 mb-4 flex items-center justify-center text-[10px] font-black uppercase shadow-md">Computers</div>
+                        <div id="wdn-lh-1" class="h-8 border-2 border-amber-900 bg-amber-50 rounded-sm flex items-center justify-center text-[10px] font-bold transition-all">LH 1</div>
+                    </div>
+
+                    <div class="col-span-2"></div>
+                    <div class="col-span-3 flex flex-col items-center justify-end pb-2 border-x-2 border-slate-300 bg-slate-50 h-full min-h-[160px]">
+                        <span class="text-[9px] font-bold text-slate-400 tracking-widest">ENTRANCE</span>
+                    </div>
+
+                    <div class="col-span-2 flex flex-col justify-end items-center h-full pb-0">
+                        <div class="w-16 h-20 border-2 border-blue-900 bg-blue-50 flex items-center justify-center text-[8px] font-black uppercase text-center shadow-md leading-tight">Librarian's<br>Desk</div>
+                    </div>
+
+                    <div class="col-span-3 flex flex-col">
+                        <div class="h-16 border-2 border-amber-900 rounded bg-amber-50 mb-4 flex flex-col overflow-hidden">
+                            <div id="wdn-rh-3" class="flex-1 border-b border-amber-900 flex items-center justify-center text-[10px] font-bold transition-all">RH 3</div>
+                            <div id="wdn-rh-2" class="flex-1 flex items-center justify-center text-[10px] font-bold transition-all">RH 2</div>
+                        </div>
+                        <div class="h-20 mb-4"></div>
+                        <div id="wdn-rh-1" class="h-8 border-2 border-amber-900 bg-amber-50 rounded-sm flex items-center justify-center text-[10px] font-bold transition-all">RH 1</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
