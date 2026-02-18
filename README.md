@@ -5,8 +5,6 @@ A basic website built using Django &amp; Tailwind CSS to search for books in DJS
 It is deployed on vercel.
 Use this link [https://djsce-library-mq8y.vercel.app/]
 
-The whole Django project folder is there in this repository.
-
 ## Tech Stack
 1. **Frontend**: HTML | Tailwind CSS | JavaScript
 2. **Backend**: Django
